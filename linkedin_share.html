@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Teknokent Avı - LinkedIn Tanıtım Görseli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background-color: #060913;
+      background-image:
+        radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.16), transparent 50%),
+        radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.12), transparent 45%),
+        radial-gradient(circle at 15% 90%, rgba(56, 189, 248, 0.08), transparent 40%),
+        linear-gradient(180deg, #070b16 0%, #030509 100%);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 44px 72px 36px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Üst Bar */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f172a;
+      border: 1.5px solid #1e293b;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .brand-info h1 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      line-height: 1.15;
+    }
+
+    .brand-info span {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #94a3b8;
+    }
+
+    .top-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .badge-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: rgba(56, 189, 248, 0.09);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      border-radius: 9999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #38bdf8;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 9999px;
+      background: #38bdf8;
+      box-shadow: 0 0 10px #38bdf8;
+    }
+
+    .badge-github {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: rgba(148, 163, 184, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #cbd5e1;
+    }
+
+    /* Hero Başlık Bölümü */
+    .hero-center {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 2px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 16px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #38bdf8;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-size: 44px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      color: #ffffff;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: #94a3b8;
+      max-width: 960px;
+      line-height: 1.45;
+    }
+
+    .hero-sub strong {
+      color: #f1f5f9;
+      font-weight: 700;
+    }
+
+    /* 3 Kart Izgarası */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      width: 100%;
+      margin: 4px 0;
+    }
+
+    .card {
+      background: rgba(14, 22, 41, 0.75);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: 18px;
+      padding: 20px 22px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .card-visual {
+      height: 115px;
+      background: rgba(9, 14, 26, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-step {
+      font-size: 11.5px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #38bdf8;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .card-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.015em;
+    }
+
+    .card-desc {
+      font-size: 13.5px;
+      color: #94a3b8;
+      line-height: 1.42;
+      flex: 1;
+    }
+
+    .card-metric {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(148, 163, 184, 0.1);
+      font-size: 12.5px;
+      color: #64748b;
+    }
+
+    .card-metric strong {
+      color: #38bdf8;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* Görsel 1: Radar */
+    .radar-box {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .radar-c1 {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border: 1px dashed rgba(56, 189, 248, 0.35);
+      border-radius: 9999px;
+    }
+
+    .radar-c2 {
+      position: absolute;
+      width: 88px;
+      height: 88px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 9999px;
+    }
+
+    .radar-c3 {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border: 1px dashed rgba(56, 189, 248, 0.12);
+      border-radius: 9999px;
+    }
+
+    .radar-center {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 9999px;
+      background: #38bdf8;
+      box-shadow: 0 0 16px #38bdf8;
+    }
+
+    .radar-beam {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 9999px;
+      background: conic-gradient(from 45deg, rgba(56, 189, 248, 0.4) 0deg, transparent 75deg, transparent 360deg);
+    }
+
+    .radar-tag {
+      position: absolute;
+      padding: 3px 8px;
+      background: rgba(9, 14, 26, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      border-radius: 9999px;
+      font-size: 10.5px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fff;
+    }
+
+    .rt-1 {
+      top: 10px;
+      left: 16px;
+    }
+
+    .rt-2 {
+      bottom: 10px;
+      right: 18px;
+    }
+
+    .rt-3 {
+      top: 12px;
+      right: 22px;
+    }
+
+    /* Görsel 2: Taksonomi */
+    .tax-box {
+      width: 100%;
+      height: 100%;
+      padding: 8px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .tax-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .tax-pill {
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .tp-blue {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+    }
+
+    .tp-green {
+      background: rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+      color: #34d399;
+    }
+
+    .tp-purple {
+      background: rgba(192, 132, 252, 0.15);
+      border: 1px solid rgba(192, 132, 252, 0.4);
+      color: #c084fc;
+    }
+
+    .tp-amber {
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      color: #fbbf24;
+    }
+
+    /* Görsel 3: Kart Preview */
+    .inspect-box {
+      width: 86%;
+      background: rgba(14, 22, 41, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 8px;
+      padding: 9px 13px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .ib-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .ib-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .ib-badge {
+      font-size: 9.5px;
+      background: rgba(56, 189, 248, 0.18);
+      color: #38bdf8;
+      padding: 1px 6px;
+      border-radius: 9999px;
+      font-weight: 600;
+    }
+
+    .ib-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .ib-line {
+      height: 4px;
+      background: rgba(148, 163, 184, 0.2);
+      border-radius: 9999px;
+    }
+
+    .ib-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 3px;
+      padding-top: 3px;
+      border-top: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .ib-link {
+      font-size: 10px;
+      color: #38bdf8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .ib-btn {
+      background: #38bdf8;
+      color: #060913;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* Orta Alt: Aksiyon & Bilgilendirme */
+    .cta-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin: 4px 0;
+    }
+
+    .btn-browse {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      height: 46px;
+      padding: 0 34px;
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      color: #060913;
+      font-size: 15px;
+      font-weight: 800;
+      border-radius: 9999px;
+      box-shadow: 0 0 28px rgba(56, 189, 248, 0.5);
+    }
+
+    .disclaimer-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 18px;
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.28);
+      border-radius: 9999px;
+      color: #fbbf24;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* Alt Bar: Metrikler */
+    .bottom-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 14px;
+      border-top: 1px solid rgba(148, 163, 184, 0.14);
+    }
+
+    .bottom-left-tag {
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stats-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13.5px;
+      color: #94a3b8;
+    }
+
+    .stat-item strong {
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 14.5px;
+    }
+
+    .stat-sep {
+      width: 1px;
+      height: 14px;
+      background: rgba(148, 163, 184, 0.25);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ÜST BAR -->
+  <header class="top-bar">
+    <div class="brand-wrap">
+      <div class="brand-logo">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="none">
+          <rect width="32" height="32" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+          <path d="M23 9L9 14.5L14.8 17.2L17.5 23L23 9Z" fill="#38bdf8" />
+          <path d="M23 9L14.8 17.2L17.5 23L23 9Z" fill="#2563eb" fill-opacity="0.6" />
+        </svg>
+      </div>
+      <div class="brand-info">
+        <h1>Teknokent Avı</h1>
+        <span>Türkiye Teknokent Firmaları Platformu</span>
+      </div>
+    </div>
+
+    <div class="top-meta">
+      <div class="badge-github">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+        </svg>
+        <span>github.com/barisatayy/teknokent_avi</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO MERKEZ BAŞLIK -->
+  <main class="hero-center">
+    <div class="hero-pill">
+      <span>Türkiye Teknokent & Ar-Ge Keşif Portalı</span>
+    </div>
+    <h2 class="hero-title">
+      Türkiye'nin Tüm Teknokentleri <span class="gradient-text">Teknokent Avı ile Tek Ekranda</span>
+    </h2>
+    <p class="hero-sub">
+      78 teknokentteki <strong>5.719 teknoloji firmasını</strong>, sınıflandırılmış Ar-Ge uzmanlıklarını keşfedin.
+    </p>
+  </main>
+
+  <!-- 3 ÖZELLİK KARTI -->
+  <section class="cards-grid">
+    <!-- KART 1 -->
+    <article class="card">
+      <div class="card-visual">
+        <div class="radar-box">
+          <div class="radar-c1"></div>
+          <div class="radar-c2"></div>
+          <div class="radar-c3"></div>
+          <div class="radar-beam"></div>
+          <div class="radar-center"></div>
+          <span class="radar-tag rt-1">Ankara</span>
+          <span class="radar-tag rt-2">Kocaeli</span>
+          <span class="radar-tag rt-3">İstanbul</span>
+        </div>
+      </div>
+      <div class="card-step">01 • KEŞFET</div>
+      <h3 class="card-title">78 Teknokent & 48 Şehir</h3>
+      <p class="card-desc">Türkiye genelindeki tüm faal teknoparklar ve teknoloji merkezlerindeki firmalar tek bir arama
+        platformunda.</p>
+      <div class="card-metric">
+        <strong>5.719</strong> <span>Kayıtlı Teknoloji Firması</span>
+      </div>
+    </article>
+
+    <!-- KART 2 -->
+    <article class="card">
+      <div class="card-visual">
+        <div class="tax-box">
+          <div class="tax-row">
+            <span class="tax-pill tp-blue">Yapay Zeka & ML</span>
+            <span class="tax-pill tp-green">İHA & Savunma</span>
+          </div>
+          <div class="tax-row">
+            <span class="tax-pill tp-purple">Biyoteknoloji</span>
+            <span class="tax-pill tp-amber">Fintek & Yazılım</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-step">02 • FİLTRELE</div>
+      <h3 class="card-title">12 Sektör & Uzmanlık Alanı</h3>
+      <p class="card-desc">Alanlara ve şehirlere göre filtreleyerek veya direkt içerik aratarak firmaları keşfedin.</p>
+      <div class="card-metric">
+        <strong>Detaylı</strong> <span>Uzmanlık Filtreleri</span>
+      </div>
+    </article>
+
+    <!-- KART 3 -->
+    <article class="card">
+      <div class="card-visual">
+        <div class="inspect-box">
+          <div class="ib-head">
+            <span class="ib-title">Teknoloji A.Ş.</span>
+            <span class="ib-badge">Ar-Ge</span>
+          </div>
+          <div class="ib-lines">
+            <div class="ib-line" style="width: 85%;"></div>
+            <div class="ib-line" style="width: 60%;"></div>
+          </div>
+          <div class="ib-footer">
+            <span class="ib-link">firma-web.com</span>
+            <span class="ib-btn">İncele</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-step">03 • İNCELE</div>
+      <h3 class="card-title">Firma Özetleri & Web Siteleri</h3>
+      <p class="card-desc">Firmaların ne iş yaptığını, özet açıklamalarını ve resmi web sitelerini doğrudan
+        görüntüleyin.</p>
+      <div class="card-metric">
+        <strong>Güncel</strong> <span>Firma Profilleri</span>
+      </div>
+    </article>
+  </section>
+
+  <!-- AKSİYON VE BİLGİLENDİRME -->
+  <div class="cta-row">
+
+    <!-- ALT BİLGİLENDİRME VE METRİK ŞERİDİ -->
+    <footer class="bottom-bar">
+      <div class="bottom-left-tag">
+        <span>Açık Kaynak Teknoloji Platformu</span>
+        <span>•</span>
+        <span>Ücretsiz & Filtrelenebilir Dizin</span>
+      </div>
+
+      <div class="stats-group">
+        <div class="stat-item">
+          <strong>5.719</strong> <span>Şirket</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <strong>78</strong> <span>Teknokent</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <strong>48</strong> <span>Şehir</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <strong>12</strong> <span>Ana Sektör</span>
+        </div>
+      </div>
+    </footer>
+
+</body>
+
+</html>

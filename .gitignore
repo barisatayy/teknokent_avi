@@ -1,0 +1,37 @@
+# Python Scriptleri ve Araçlar (Yerel geliştirme içindir)
+*.py
+*.py[cod]
+__pycache__/
+*$py.class
+*.env
+.venv/
+env/
+*.ipynb
+
+# SQLite ve Büyük Veritabanı Dosyaları
+*.db
+*.db-journal
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Ham Tarama Dosyaları, Kök Dizindeki Eski JSON'lar ve Notlar
+crawled_firmalar*.json
+crawled_firmalar*.jsonl
+crawled_teknokentler/
+tum_firmalar.json
+/firmalar.json
+/teknokentler.json
+/kategoriler_ve_alt_kategoriler.json
+firmalar_teknokentler/
+cozulemeyen_firma_isimleri/
+*checkpoint.json
+llm_taksonomi/
+
+# data/ klasörünü kesinlikle koru
+!data/
+!data/**
+
+# Model ve Çalışma Dosyaları
+hf_models/
+.agents/
