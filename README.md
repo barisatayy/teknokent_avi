@@ -12,7 +12,7 @@ Türkiye genelindeki teknokent ve teknoparklarda faaliyet gösteren teknoloji ve
 ## Mimari ve Çalışma Mantığı
 
 1. **Veri Toplama:** Teknokentlerin firma dizinleri taranarak firma web sitelerine ulaşılmış, site içeriklerinden kurumsal faaliyet özetleri çıkarılmıştır.
-2. **LLM ile Taksonomi ve Sınıflandırma:** Çıkarılan özet metinler, büyük dil modeli kullanılarak incelenmiştir. Firmalar faaliyet alanlarına göre 12 standart ana sektör ve ilgili alt uzmanlık kategorilerine etiketlenmiştir. Oyun, medikal bilişim, savunma, eğitim ve tarım gibi dikey alanların genel yazılım kategorisine yığılması engellenmiştir.
+2. **LLM ile Taksonomi ve Sınıflandırma:** Çıkarılan özet metinler, büyük dil modeli kullanılarak incelenmiştir. Firmalar faaliyet alanlarına göre 12 standart ana sektör ve ilgili alt uzmanlık kategorilerine etiketlenmiştir.
 3. **Sunucusuz İstemci Mimarisi:** Platform, herhangi bir arka uç sunucusu veya API maliyeti olmadan çalışır. Veri seti istemci tarafına optimize edilmiş JSON formatında yüklenir ve tüm arama/filtreleme işlemleri doğrudan tarayıcı belleğinde gerçekleştirilir.
 
 ## Dosya Yapısı
