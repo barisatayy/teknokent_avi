@@ -2,6 +2,8 @@
 
 Türkiye genelindeki teknokent ve teknoparklarda faaliyet gösteren teknoloji ve Ar-Ge firmalarını tek çatı altında toplayan, tarayıcı üzerinde istemci taraflı çalışan arama ve keşif platformu.
 
+![Teknokent Avı](p3.png)
+
 ## Kapsam
 
 * 78 teknokent ve teknoloji geliştirme bölgesi
